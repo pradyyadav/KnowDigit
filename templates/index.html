@@ -1,0 +1,26 @@
+{% load static %}
+<html>
+    <head>
+        <link href="{% static 'css/index.css' %}" rel="stylesheet" type="text/css">
+        <title>Knowdigit</title>
+    </head>
+    <body>
+        <a id = "dopebrand" href="/" > 
+            <img height = "40px" src = "{% static 'icons/KD.png' %}" alt="no_image"/> 
+                KnowDigit
+        </a>
+        <p> This website is just a model deployment which was trained in MNIST digit classification dataset.<p>
+        <br>
+        <br>
+        <br>
+        <p id="dopetext">Upload a handwritten digit image : </p>
+        <form action = "" method = "POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="file" id="myFile" name="filename">
+            <input type="submit">
+        </form>
+        {% if prediction %}
+        <p id="dopetext">The image you uploaded was probably a : {{prediction}}</p>
+        {% endif %}
+    </body>
+</html>
