@@ -12,12 +12,16 @@ You can refer to the jupyter notebook [here](https://github.com/pradyyadav/KnowD
 
 ### Instructions to run this app locally.
 - Clone the repository : 
+
 ``` git clone https://github.com/pradyyadav/KnowDigit```
 - Check your Django Installation : 
+
 ``` python -m django --version```
 - Install Django if you don't have it : 
+
 ``` pip install django ```
 - Install all requirements :
+
 ``` pip install -r requirements.txt```
 
 ### Languages and Frameworks : 
